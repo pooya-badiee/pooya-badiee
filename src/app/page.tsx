@@ -1,3 +1,7 @@
-export default function Home() {
-  return null
+import HomeScreen from "@/home-screen";
+
+function Home() {
+  return <HomeScreen />
 }
+
+export default Home;
