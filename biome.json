@@ -21,6 +21,9 @@
       "recommended": true,
       "nursery": {
         "noShadow": "warn"
+      },
+      "performance": {
+        "noImgElement": "off"
       }
     }
   },

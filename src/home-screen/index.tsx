@@ -1,15 +1,13 @@
-import Image from 'next/image'
-import backgroundImageData from './images/background.jpg'
 import classes from './styles.module.scss'
 
 function HomeScreen() {
   return (
     <main className={classes.canvasOwner}>
       <div className={classes.canvas}>
-        <Image
-          src={backgroundImageData.src}
-          width={backgroundImageData.width}
-          height={backgroundImageData.height}
+        <img
+          src="/images/background.jpg"
+          width={3615}
+          height={2259}
           className={classes.canvasBackground}
           alt="background"
         />
