@@ -6,7 +6,8 @@
     "useIgnoreFile": false
   },
   "files": {
-    "ignoreUnknown": false
+    "ignoreUnknown": false,
+    "includes": ["!**/node_modules/**", "!.next/**", "**/*.{js,ts,jsx,tsx,css,scss,json,md}"]
   },
   "formatter": {
     "enabled": true,
