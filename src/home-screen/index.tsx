@@ -4,8 +4,8 @@ function HomeScreen() {
   return (
     <main className={classes.canvasOwner}>
       <div className={classes.canvas}>
-        <img src="/images/background.jpg" width={3615} height={2259} className={classes.background} alt="background" />
-        <img src="/images/table.png" width={3615} height={2259} className={classes.table} alt="table" />
+        <img src="/assets/background.jpg" width={3615} height={2259} className={classes.background} alt="background" />
+        <img src="/assets/table.png" width={3615} height={2259} className={classes.table} alt="table" />
       </div>
     </main>
   )
