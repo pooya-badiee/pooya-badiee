@@ -1,9 +1,13 @@
+'use client'
+import clsx from 'clsx'
 import HomeScreenImage from './components/home-screen-image'
 import classes from './styles.module.scss'
+import useAreImagesLoaded from './use-are-images-loaded'
 
 function HomeScreen() {
+  const { areImagesLoaded, rootElementRef } = useAreImagesLoaded()
   return (
-    <main className={classes.canvasOwner}>
+    <main ref={rootElementRef} className={clsx(classes.canvasOwner, { [classes.loaded]: areImagesLoaded })}>
       <div className={classes.canvas}>
         <HomeScreenImage path="/assets/background.jpg" alt="Background" className={classes.background} />
         <HomeScreenImage path="/assets/table.png" alt="Table" className={classes.layer} />

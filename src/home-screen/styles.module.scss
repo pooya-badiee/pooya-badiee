@@ -5,6 +5,16 @@
   place-items: center;
   background-color: #000;
   overflow: hidden;
+  img {
+    transition: filter 1s, opacity 2s;
+    filter: none;
+  }
+  &:where(:not(.loaded)) {
+    img {
+      opacity: 0;
+      filter: grayscale(1) brightness(0.2) blur(20px);
+    }
+  }
 }
 .canvas {
   aspect-ratio: 16 / 10; // 16:10
