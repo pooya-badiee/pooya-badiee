@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import './globals.scss'
+import '../globals.scss'
 
 export const metadata: Metadata = {
   title: 'Pooya Badiee - Full Stack Developer',

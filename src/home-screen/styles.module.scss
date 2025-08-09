@@ -40,3 +40,24 @@
   bottom: 0;
   width: 100%;
 }
+.selectPhone {
+  position: absolute;
+  width: 10%;
+  height: 11%;
+  background-color: red;
+  opacity: 0.5;
+  position: absolute;
+  top: 83%;
+  left: 67%;
+  cursor: pointer;
+}
+.selectLaptop {
+  opacity: 0.5;
+  background-color: green;
+  width: 26%;
+  height: 25%;
+  position: absolute;
+  top: 62%;
+  left: 48%;
+  cursor: pointer;
+}

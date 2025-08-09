@@ -14,6 +14,10 @@ function HomeScreen() {
         <HomeScreenImage path="/assets/phone.png" alt="Phone" className={classes.layer} />
         <HomeScreenImage path="/assets/laptop.png" alt="Laptop" className={classes.layer} />
         <HomeScreenImage path="/assets/glasses.png" alt="Glasses" className={classes.layer} />
+        {/* Selections */}
+        <button type='button' aria-label='Select Laptop' className={classes.selectLaptop} />
+        <button type='button' aria-label='Select Phone' className={classes.selectPhone} />
+        
       </div>
     </main>
   )
