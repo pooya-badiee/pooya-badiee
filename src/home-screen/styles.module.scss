@@ -6,7 +6,6 @@
   background-color: #000;
   overflow: hidden;
   .canvas {
-    transition: filter 1s, opacity 2s;
     filter: none;
   }
   &:where(:not(.loaded)) {
@@ -24,6 +23,7 @@
   place-items: center;
   overflow: hidden;
   position: relative;
+  transition: filter 1s, opacity 2s;
   img {
     user-select: none;
   }
@@ -31,12 +31,23 @@
     .laptopLayer {
       opacity: 1;
     }
+    .background {
+      opacity: 0.98;
+    }
   }
   &:has(.selectPhone:hover, .selectPhone:focus-visible) {
     .phoneLayer {
       opacity: 1;
     }
   }
+}
+.backgroundColor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
 }
 .laptopLayer {
   opacity: 0;
@@ -51,6 +62,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition-duration: 0.7s;
 }
 .layer {
   position: absolute;
