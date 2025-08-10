@@ -12,8 +12,8 @@ function HomeScreen() {
       <div className={classes.canvas}>
         <HomeScreenImage path="/assets/background.jpg" alt="Background" className={classes.background} />
         <HomeScreenImage path="/assets/table.png" alt="Table" className={classes.layer} />
-        <HomeScreenImage path="/assets/phone.png" alt="Phone" className={classes.layer} />
-        <HomeScreenImage path="/assets/laptop.png" alt="Laptop" className={classes.layer} />
+        <HomeScreenImage path="/assets/phone.png" alt="Phone" className={clsx(classes.layer, classes.phoneLayer)} />
+        <HomeScreenImage path="/assets/laptop.png" alt="Laptop" className={clsx(classes.layer, classes.laptopLayer)} />
         <HomeScreenImage path="/assets/glasses.png" alt="Glasses" className={classes.layer} />
         {/* Selections */}
         <button type="button" aria-label="Select Laptop" className={classes.selectLaptop} />

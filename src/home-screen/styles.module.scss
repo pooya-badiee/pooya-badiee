@@ -5,14 +5,15 @@
   place-items: center;
   background-color: #000;
   overflow: hidden;
-  img {
+  .canvas {
     transition: filter 1s, opacity 2s;
     filter: none;
   }
   &:where(:not(.loaded)) {
-    img {
+    .canvas {
       opacity: 0;
       filter: grayscale(1) brightness(0.2) blur(20px);
+      pointer-events: none;
     }
   }
 }
@@ -26,6 +27,24 @@
   img {
     user-select: none;
   }
+  &:has(.selectLaptop:hover, .selectLaptop:focus-visible) {
+    .laptopLayer {
+      opacity: 1;
+    }
+  }
+  &:has(.selectPhone:hover, .selectPhone:focus-visible) {
+    .phoneLayer {
+      opacity: 1;
+    }
+  }
+}
+.laptopLayer {
+  opacity: 0;
+  transition: all 0.3s;
+}
+.phoneLayer {
+  opacity: 0;
+  transition: all 0.3s;
 }
 .background {
   position: absolute;
@@ -44,16 +63,12 @@
   position: absolute;
   width: 10%;
   height: 11%;
-  background-color: red;
-  opacity: 0.5;
   position: absolute;
   top: 83%;
   left: 67%;
   cursor: pointer;
 }
 .selectLaptop {
-  opacity: 0.5;
-  background-color: green;
   width: 26%;
   height: 25%;
   position: absolute;
