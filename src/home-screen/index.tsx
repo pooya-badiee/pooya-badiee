@@ -10,6 +10,7 @@ function HomeScreen() {
   return (
     <main ref={rootElementRef} className={clsx(classes.canvasOwner, { [classes.loaded]: areImagesLoaded })}>
       <div className={classes.canvas}>
+        <div className={classes.canvasEdges} />
         <div className={classes.backgroundColor} />
         <HomeScreenImage path="/assets/background.jpg" alt="Background" className={classes.background} />
         <HomeScreenImage path="/assets/table.png" alt="Table" className={classes.layer} />
