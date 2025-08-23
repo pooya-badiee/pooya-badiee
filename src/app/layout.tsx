@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import '../globals.scss'
 
-export const chalkboardFont = localFont({
+const chalkboardFont = localFont({
   src: [
     {
       path: './fonts/chalkboard.woff2',
@@ -17,6 +17,7 @@ export const chalkboardFont = localFont({
   ],
   variable: '--font-chalkboard',
   display: 'swap',
+  fallback: ['Arial', 'sans-serif'],
 })
 
 export const metadata: Metadata = {
