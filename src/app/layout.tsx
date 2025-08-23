@@ -1,5 +1,23 @@
 import type { Metadata, Viewport } from 'next'
+import localFont from 'next/font/local'
 import '../globals.scss'
+
+export const chalkboardFont = localFont({
+  src: [
+    {
+      path: './fonts/chalkboard.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/chalkboard.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-chalkboard',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Pooya Badiee - Full Stack Developer',
@@ -32,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={chalkboardFont.variable}>{children}</body>
     </html>
   )
 }
