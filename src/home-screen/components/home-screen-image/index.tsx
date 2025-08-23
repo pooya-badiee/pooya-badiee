@@ -19,8 +19,10 @@ function HomeScreenImage({ path, alt, className }: HomeScreenImageProps) {
 }
 
 function getCloudflareImageUrl(path: string, width: number): string {
-  const searchParams = new URLSearchParams({ width: width.toString(), quality: '80' })
-  return `https://pooya.info/cdn-cgi/image/${searchParams.toString()}/${path}`
+  const params: Record<string, string> = { width: width.toString(), quality: '80', format: 'auto' }
+  // looks like this: x=1,z=3
+  const paramsString = Object.entries(params).map(([key, value]) => `${key}=${value}`).join(',')
+  return `https://pooya.info/cdn-cgi/image/${paramsString}/${path}`
 }
 const widths = [400, 800, 1200, 1600, 2400, 3200, 3600]
 function getSrcSet(path: string): string {
