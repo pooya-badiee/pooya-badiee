@@ -15,11 +15,13 @@ function HomeScreen() {
         <HomeScreenImage path="/assets/table.png" alt="Table" className={classes.layer} />
         <HomeScreenImage path="/assets/phone.png" alt="Phone" className={clsx(classes.layer, classes.phoneLayer)} />
         <HomeScreenImage path="/assets/laptop.png" alt="Laptop" className={clsx(classes.layer, classes.laptopLayer)} />
+        <HomeScreenImage path="/assets/glasses.png" alt="Glasses" className={clsx(classes.layer, classes.glassesLayer)} />
         <HomeScreenImage path="/assets/arrows.png" alt="Arrows" className={classes.layer} />
-        <HomeScreenImage path="/assets/glasses.png" alt="Glasses" className={classes.layer} />
         {/* Selections */}
         <button type="button" aria-label="Select Laptop" className={classes.selectLaptop} />
         <button type="button" aria-label="Select Phone" className={classes.selectPhone} />
+        <button type="button" aria-label="Select Me" className={classes.selectMe1} />
+        <button type="button" aria-hidden="true" tabIndex={-1} className={classes.selectMe2} />
         {/* arrow texts */}
         <span className={clsx(classes.arrowText, classes.aboutMe)} aria-hidden="true">
           About Me
