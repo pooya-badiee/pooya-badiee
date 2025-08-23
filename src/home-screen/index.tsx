@@ -1,6 +1,7 @@
 'use client'
 import clsx from 'clsx'
 import HomeScreenImage from './components/home-screen-image'
+import Logo from './components/logo'
 import classes from './styles.module.scss'
 import useAreImagesLoaded from './use-are-images-loaded'
 
@@ -15,8 +16,13 @@ function HomeScreen() {
         <HomeScreenImage path="/assets/table.png" alt="Table" className={classes.layer} />
         <HomeScreenImage path="/assets/phone.png" alt="Phone" className={clsx(classes.layer, classes.phoneLayer)} />
         <HomeScreenImage path="/assets/laptop.png" alt="Laptop" className={clsx(classes.layer, classes.laptopLayer)} />
-        <HomeScreenImage path="/assets/glasses.png" alt="Glasses" className={clsx(classes.layer, classes.glassesLayer)} />
+        <HomeScreenImage
+          path="/assets/glasses.png"
+          alt="Glasses"
+          className={clsx(classes.layer, classes.glassesLayer)}
+        />
         <HomeScreenImage path="/assets/arrows.png" alt="Arrows" className={classes.layer} />
+        <Logo className={classes.logo} />
         {/* Selections */}
         <button type="button" aria-label="Select Laptop" className={classes.selectLaptop} />
         <button type="button" aria-label="Select Phone" className={classes.selectPhone} />
