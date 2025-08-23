@@ -20,6 +20,16 @@ function HomeScreen() {
         {/* Selections */}
         <button type="button" aria-label="Select Laptop" className={classes.selectLaptop} />
         <button type="button" aria-label="Select Phone" className={classes.selectPhone} />
+        {/* arrow texts */}
+        <span className={clsx(classes.arrowText, classes.aboutMe)} aria-hidden="true">
+          About Me
+        </span>
+        <span className={clsx(classes.arrowText, classes.myExperience)} aria-hidden="true">
+          My Experience
+        </span>
+        <span className={clsx(classes.arrowText, classes.mySkills)} aria-hidden="true">
+          My Skills
+        </span>
       </div>
     </main>
   )
